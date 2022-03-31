@@ -1,0 +1,150 @@
+body {
+  max-width: 960px;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* animation-1 */
+.animationOne {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.animationOne div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-top-color: #ad60f5;
+  border-radius: 50%;
+  animation: animation1 1.2s linear infinite;
+}
+
+.animationOne div:nth-child(2) {
+  border: 10px solid transparent;
+  border-bottom-color: #ad60f5;
+  animation: animation2 1.2s linear infinite;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+/* animation-2  */
+.animationTwo {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+}
+
+.animationTwo div {
+  width: 20px;
+  height: 20px;
+  background-color: #0077ff;
+  border-radius: 50%;
+  animation: animation3 1s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite
+    alternate;
+}
+
+.animationTwo div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+
+.animationTwo div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+
+@keyframes animation3 {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* animation-3 */
+.animationThree {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+}
+
+.animationThree div {
+  width: 20px;
+  height: 20px;
+  background-color: #ffab00;
+  border-radius: 50%;
+  animation: animation4 0.8s ease-out alternate infinite;
+}
+
+.animationThree div:nth-child(2) {
+  border-radius: 0;
+  animation: animation5 1.4s ease-out alternate infinite;
+}
+
+.animationThree div:nth-child(3) {
+  animation: animation6 0.6s ease-out alternate infinite;
+}
+
+@keyframes animation4 {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animation5 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes animation6 {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
